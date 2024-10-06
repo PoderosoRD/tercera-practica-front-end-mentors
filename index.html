@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -8,32 +8,37 @@
   <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | NFT preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
   <header></header>
 
-  <main class="tarjeta">
-  <img src="./images/image-equilibrium.jpg" alt="bloque en equilibrio" >
-  <h3 class="titulo">Equilibrium #3429</h3>
+  <main>
 
-  <p class="text">Our Equilibrium collection promotes balance and calm.</p>
+    <article class="card">
+      <img class="card_img_cube" src="./images/image-equilibrium.jpg" alt="bloque en equilibrio" >
+      <h3 class="card_title">Equilibrium #3429</h3>
 
-  <span class="eth">0.041 ETH</span>
-  <span class="dias">3 days left</span>
-  
-  <h6 class="creador">Creation of <span class="nombre_creador">Jules Wyvern</span></h6>
+      <p class="card_text">Our Equilibrium collection promotes balance and calm.</p>
+
+      <div class="card_icons_inline">
+          <span class="card_eth"><img class="card_eth_icon" src="./images/icon-ethereum.svg">0.041 ETH</span>
+          <span class="card_days"><img class="card_days_icon" src="./images/icon-clock.svg">3 days left</span>
+      </div> 
+      
+      <hr class="card_line">
+      
+      <div class="card_creator_block">
+        <img class="card_img_avatar" src="./images/image-avatar.png">
+        <h6 class="card_creator_title">Creation of <span class="card_creator_name"> Jules Wyvern</span></h6>
+      </div>
+    </article>
   </main> 
 
   <footer>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Orlando Junior</a>.
   </div>
   </footer>
 </body>

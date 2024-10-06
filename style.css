@@ -1,18 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--very-dark-blue-main);
-}
-
 :root {
+    --family-letter: "Outfit", sans-serif;
     --very-dark-blue-main: hsl(217, 54%, 11%);
     --very-dark-blue-card: hsl(216, 50%, 16%);
     --very-dark-blue-line: hsl(215, 32%, 27%);
@@ -21,35 +15,131 @@ body{
     --cyan: hsl(178, 100%, 50%);
 }
 
-.tarjeta{
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--very-dark-blue-main);
+    height: 100vh;
+}
+
+.card{
     box-sizing: border-box;
+    font-family: var(--family-letter);
+    border-radius: 10px; 
+    padding: 1rem;
     background-color: var(--very-dark-blue-card);
 }
 
-img {
+.card_img_cube {
+    border-radius: 5px;
     height: 13.5rem
 }
 
-.titulo {
+.card_img_cube:hover {
+    image: url(./images/icon-view.svg);
+    cursor: pointer;
+}
+
+.card_title {
+    font-size: 1.0625rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
     color: var(--white);
+    font-weight: 600;
 }
 
-.text {
-    color: var(--soft-blue);
-}
-
-.eth{
+.card_title:hover{
     color: var(--cyan);
+    cursor: pointer;
 }
 
-.dias {
+.card_text {
+    font-size: 0.75rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--soft-blue);
+    width: 13.5rem;  
+}
+
+.card_icons_inline {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card_eth_icon {
+    margin-right: 4px;
+}
+
+.card_eth{
+    display: flex;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--cyan);
+    align-items: center;
+}
+
+.card_days_icon {
+    margin-right: 4px;
+}
+
+.card_days {
+    font-size: 0.75rem;
+    color: var(--soft-blue);
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.card_line {
+    margin-top: 0.8rem; 
+}
+
+.card_creator_block {
+    display: inline-flex;
+    margin-top: 0.8rem;
+}
+
+.card_img_avatar {
+    height: 2rem;
+    border-radius: 50%;
+    border: solid 1px var(--white);
+    margin-right: 0.8rem;
+}
+
+.card_creator_title {
+    font-weight: 300;
+    margin-top: 0.7rem;
     color: var(--soft-blue);
 }
 
-.creador {
-    color: var(--soft-blue);
-}
-
-.nombre_creador {
+.card_creator_name {
     color: var(--white);
+    margin-left: 1px;
+}
+
+.card_creator_name:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.attribution {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.6875rem;
+    background-color: var(--white);
+}
+
+@media screen and (max-height: 484px) {
+    .attribution {
+        position: static;
+    }
+} 
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
 }
